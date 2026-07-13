@@ -1,0 +1,19 @@
+{
+  "skill_name": "agnes-ai",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "画一张大表哥风格的海报，西部牛仔在夕阳下的剪影",
+      "expected_output": "调用文生图 API，model 为 agnes-image-2.0-flash，返回图片 URL 或 base64"
+    },
+    {
+      "id": 2,
+      "prompt": "用这张图片 https://example.com/product.jpg 改成赛博朋克风格",
+      "expected_output": "调用图生图 API，传入 image 数组包含图片 URL，返回编辑后的图片"
+    },
+    {
+      "prompt": "生成一个视频，一只猫在沙滩上散步，日落时分，电影质感",
+      "expected_output": "调用视频生成 API，创建 agnes-video-v2.0 任务，然后轮询直到 completed，返回视频 URL"
+    }
+  ]
+}

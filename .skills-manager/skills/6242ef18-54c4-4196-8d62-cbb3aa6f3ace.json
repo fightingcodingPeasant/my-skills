@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "skill_id": "6242ef18-54c4-4196-8d62-cbb3aa6f3ace",
+  "path": "ai-learning-system",
+  "path_key": "ai-learning-system",
+  "enabled": true,
+  "tags": [],
+  "source": {
+    "type": "import",
+    "ref": null,
+    "subpath": null,
+    "branch": null
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "skill_id": "c20340e4-4df7-4e72-840b-f319a19d5548",
+  "path": "agent-eval",
+  "path_key": "agent-eval",
+  "enabled": true,
+  "tags": [],
+  "source": {
+    "type": "import",
+    "ref": null,
+    "subpath": null,
+    "branch": null
+  }
+}

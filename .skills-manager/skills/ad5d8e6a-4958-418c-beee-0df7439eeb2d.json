@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "skill_id": "ad5d8e6a-4958-418c-beee-0df7439eeb2d",
+  "path": "agnes-ai",
+  "path_key": "agnes-ai",
+  "enabled": true,
+  "tags": [],
+  "source": {
+    "type": "import",
+    "ref": null,
+    "subpath": null,
+    "branch": null
+  }
+}
