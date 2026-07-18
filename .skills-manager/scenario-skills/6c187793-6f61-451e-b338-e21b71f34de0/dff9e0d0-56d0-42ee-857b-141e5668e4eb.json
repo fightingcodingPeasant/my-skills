@@ -2,6 +2,11 @@
   "schema_version": 1,
   "scenario_id": "6c187793-6f61-451e-b338-e21b71f34de0",
   "skill_id": "dff9e0d0-56d0-42ee-857b-141e5668e4eb",
-  "sort_order": 15,
-  "tools": {}
+  "sort_order": 24,
+  "tools": {
+    "claude_code": true,
+    "codex": true,
+    "github_copilot": true,
+    "openclaw": true
+  }
 }
