@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "skill_id": "1aa6537c-a3b2-4bae-a345-8831209f46e5",
+  "path": "writing-guidelines",
+  "path_key": "writing-guidelines",
+  "enabled": true,
+  "tags": [],
+  "source": {
+    "type": "skillssh",
+    "ref": "vercel-labs/agent-skills/writing-guidelines",
+    "subpath": "skills\\writing-guidelines",
+    "branch": null
+  }
+}
