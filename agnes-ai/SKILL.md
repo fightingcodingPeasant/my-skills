@@ -5,24 +5,25 @@ description: >
   Use this skill whenever the user asks to generate, create, draw, or make any image, picture, poster, illustration, product photo, avatar, meme, thumbnail, banner, or visual content — even casually phrased like "画一张", "生成图片", "给我个图", "make an image".
   Also use for image editing (图生图), style transfer, multi-image composition, and any visual content creation.
   Additionally, use when the user asks to generate, create, or make any video, animation, motion clip, short video, reel, TikTok-style video, or animated content — phrased as "生成视频", "做个视频", "animate this", etc.
-  API key: sk-4QICt2q57VUTSgCmmynUq9SlTQMlHfQ1D8THTBDJhOV5UUiu
+  API key: sk-xdLVqNftYWOe4H9SrgodQh1yfgIhwYcGKHRqCYBAsRwPl26u
 ---
 
 # Agnes AI — Image & Video Generation
 
-Call the Agnes AI API to generate images and videos. The API base URL is `https://apihub.agnes-ai.com`.
+Call the Agnes AI API to generate images and videos. The API base URL is `https://api.agnes-ai.cn`.
+
 
 ## Authentication
 
 All requests require:
 ```
-Authorization: Bearer sk-4QICt2q57VUTSgCmmynUq9SlTQMlHfQ1D8THTBDJhOV5UUiu
+Authorization: Bearer sk-xdLVqNftYWOe4H9SrgodQh1yfgIhwYcGKHRqCYBAsRwPl26u
 Content-Type: application/json
 ```
 
-## Image Generation (agnes-image-2.0-flash)
+## Image Generation (agnes-image-2.1-flash)
 
-Endpoint: `POST https://apihub.agnes-ai.com/v1/images/generations`
+Endpoint: `POST https://api.agnes-ai.cn/v1/images/generations`
 
 ### Text-to-Image
 
@@ -30,7 +31,7 @@ Send `model`, `prompt`, and `size`. Do NOT send `image`.
 
 ```json
 {
-  "model": "agnes-image-2.0-flash",
+  "model": "agnes-image-2.1-flash",
   "prompt": "A clean product photo of a glass cube on a white studio background, soft shadows, high detail",
   "size": "1024x768",
   "extra_body": {
@@ -47,7 +48,7 @@ Send `model`, `prompt`, `size`, and `image` (array of URLs or Data URIs). The `i
 
 ```json
 {
-  "model": "agnes-image-2.0-flash",
+  "model": "agnes-image-2.1-flash",
   "prompt": "Transform this image into a cinematic cyberpunk style while preserving the main subject and composition",
   "size": "1024x768",
   "extra_body": {
@@ -63,7 +64,7 @@ Pass multiple URLs in `extra_body.image`:
 
 ```json
 {
-  "model": "agnes-image-2.0-flash",
+  "model": "agnes-image-2.1-flash",
   "prompt": "Combine the two characters into an intense fantasy battle scene, dynamic lighting, detailed background, cinematic composition",
   "size": "1024x768",
   "extra_body": {
@@ -111,7 +112,7 @@ Video generation is **asynchronous**: create a task first, then poll for results
 
 ### Step 1: Create Video Task
 
-Endpoint: `POST https://apihub.agnes-ai.com/v1/videos`
+Endpoint: `POST https://api.agnes-ai.cn/v1/videos`
 
 **Text-to-Video:**
 ```json
@@ -169,14 +170,14 @@ Response includes `video_id` (recommended for polling) and `task_id`.
 
 **Recommended** — use `video_id`:
 ```
-GET https://apihub.agnes-ai.com/agnesapi?video_id=<VIDEO_ID>
-Authorization: Bearer sk-4QICt2q57VUTSgCmmynUq9SlTQMlHfQ1D8THTBDJhOV5UUiu
+GET https://api.agnes-ai.cn/agnesapi?video_id=<VIDEO_ID>
+Authorization: Bearer sk-xdLVqNftYWOe4H9SrgodQh1yfgIhwYcGKHRqCYBAsRwPl26u
 ```
 
 **Legacy** — use `task_id`:
 ```
-GET https://apihub.agnes-ai.com/v1/videos/<TASK_ID>
-Authorization: Bearer sk-4QICt2q57VUTSgCmmynUq9SlTQMlHfQ1D8THTBDJhOV5UUiu
+GET https://api.agnes-ai.cn/v1/videos/<TASK_ID>
+Authorization: Bearer sk-xdLVqNftYWOe4H9SrgodQh1yfgIhwYcGKHRqCYBAsRwPl26u
 ```
 
 Poll every 5 seconds. When `status` is `"completed"`, the video URL is in `remixed_from_video_id`.

@@ -46,6 +46,10 @@ Run `agent-browser skills list` to see everything available on the installed ver
 - Sessions, authentication vault, state persistence, video recording
 - Specialized skills for Electron apps, Slack, exploratory testing, cloud providers
 
+## Related Skills
+
+- [`agnes-ai`](agnes-ai): Generate images and videos using Agnes AI API
+
 ## Observability Dashboard
 
 The dashboard runs independently of browser sessions on port 4848 and can also be opened through a proxied or forwarded URL such as `https://dashboard.agent-browser.localhost`. Agents should stay on the dashboard origin: session tabs, status, and stream traffic are proxied internally, so session ports do not need to be exposed.

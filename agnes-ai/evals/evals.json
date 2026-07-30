@@ -4,7 +4,7 @@
     {
       "id": 1,
       "prompt": "画一张大表哥风格的海报，西部牛仔在夕阳下的剪影",
-      "expected_output": "调用文生图 API，model 为 agnes-image-2.0-flash，返回图片 URL 或 base64"
+      "expected_output": "调用文生图 API，model 为 agnes-image-2.1-flash，返回图片 URL 或 base64"
     },
     {
       "id": 2,
